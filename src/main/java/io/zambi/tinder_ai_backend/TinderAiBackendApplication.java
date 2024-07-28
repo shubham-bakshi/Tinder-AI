@@ -29,6 +29,10 @@ public class TinderAiBackendApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		conversationRepository.deleteAll();
+		profileRepository.deleteAll();
+
 		Profile profile = new Profile(
 				"1",
 				"Shubham",
